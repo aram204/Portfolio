@@ -1,0 +1,59 @@
+
+
+.home-page{
+  height:calc(100vh - 300px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 130px;
+  padding-top: 300px;
+  overflow: hidden;
+}
+
+.name{
+font-style: normal;
+font-weight: 800;
+font-size: 38px;
+/* identical to box height */
+letter-spacing: 0.08em;
+color: #000C24;
+-webkit-text-stroke: 0.4px #FFFFFF;
+margin-bottom: 10px;
+}
+
+.profession{
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 27px;
+color: #FFFFFF;
+}
+
+.home-contacts{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+
+.icon{
+  width: 25px;
+  color: #928A97;
+  transition: all 0.3s ease;
+}
+
+.icon:hover{
+  color:#F44336;
+  transform: translateY(-10%);
+  cursor: pointer;
+}
+
+.scroll{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  bottom: 5%;
+  color: #928A97;
+}
+

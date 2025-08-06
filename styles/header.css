@@ -1,0 +1,60 @@
+.header-container{
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  /* Group 46 */
+
+  position: absolute;
+  left: 129px;
+  top: 45.5px;
+  z-index: 1000;
+
+}
+
+.header-tag{
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+
+  color: #928A97;
+  position: relative;
+  
+  
+}
+
+.header-tag::after{
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #F44336;
+  transition: width 0.3s ease;
+}
+
+.header-tag:hover {
+  cursor: pointer;
+  color: #F44336;
+  transition: color 0.3s ease;
+}
+
+.header-tag:hover::after {
+  width: 100%;
+}
+
+.checked{
+  color:#F44336;
+  position: relative;
+}
+
+.checked-tag{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -45%);
+  width: 110px;
+  z-index: -1;
+}
+

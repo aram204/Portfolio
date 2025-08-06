@@ -1,0 +1,121 @@
+.about-me-page {
+  margin-left: 130px;
+  display: flex;
+  column-gap: 50px;
+  height:100vh;
+  padding-left: 30px;
+  padding-right: 40px;
+  position: relative;
+  align-items: center;
+}
+
+.image-container {
+  perspective: 1000px;
+}
+
+.my_image {
+  max-width: 375px;
+  transform: rotateY(10deg);
+}
+
+.about-me-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.about-me-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+
+  color: #F44336;
+
+}
+
+.about-me {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 170%;
+  /* or 41px */
+  color: #000C24;
+}
+
+.image-back {
+  height: 200px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+
+
+.download-cv {
+  margin-top: 30px;
+  border: none;
+  padding: 16px 24px;
+  gap: 10px;
+  width: 170px;
+  height: 53px;
+  background: #000C24;
+  border-radius: 4px;
+  color: white;
+}
+
+.link{
+  width: max-content;
+}
+
+.download-cv:hover{
+  background-color: #001746;
+  cursor: pointer;
+}
+
+.about-me-page .scroll{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  color: #928A97;
+  font-weight: 500;
+}
+
+@media(max-width: 1100px){
+  .about-me{
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 860px){
+  .about-me-page{
+    
+    flex-direction: column;
+    row-gap: 50px;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  
+  .about-me-page .scroll{
+    bottom: 2%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .my_image{
+    width: 100%;
+    max-width: 375px;
+  }
+
+  .about-me{
+    font-size: 18px;
+  }
+}

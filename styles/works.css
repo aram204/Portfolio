@@ -1,0 +1,181 @@
+.works-page {
+  display: flex;
+  height:100vh;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  transform: translateX(-200%);
+}
+
+.all-works{
+  flex: 0 0 calc(100vw - 145px);
+  display: flex;
+  column-gap: 50px;
+  height:max-content;
+  padding-left: 30px;
+  padding-right: 40px;
+  margin-left: 130px;
+  position: relative;
+  align-items: center;  
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
+}
+
+.work-image-container {
+  perspective: 1000px;
+  position: relative;
+}
+
+.work_image {
+  max-width: 375px;
+  transform: rotateY(10deg);
+}
+
+.work-image-back {
+  height: 200px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+.change-work{
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  width: 70px;
+}
+
+.change-work:hover{
+  cursor: pointer;
+  filter: brightness(70%);
+}
+
+.work-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  padding-bottom: 100px;
+}
+
+.work-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+
+  color: #F44336;
+
+}
+
+.my-work-header{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+
+  color: #F44336;
+}
+
+.about-work {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 170%;
+  /* or 41px */
+  color: #000C24;
+}
+
+.works-page .scroll{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #928A97;
+  font-weight: 500;
+}
+
+.skills-for-work{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.skill{
+  background-color: #928A97;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.slides{
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.slide{
+  border-radius: 2px;
+  height: 3px;
+  width: 100%;
+  background-color: #C4C4C4;
+}
+
+.slides::before{
+  content:"01";
+  position: absolute;
+  top: -20px;
+}
+
+.checked-work{
+  background-color: #000C24;
+}
+
+@media(max-width: 1100px){
+  .about-work{
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 860px){
+  .works-page{
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    
+  }
+
+  .all-works{
+    flex: 0 0 100vw;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 100%;
+  }
+  
+  .works-page .scroll{
+    bottom: 2%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work_image{
+    width: 100%;
+    max-width: 375px;
+  }
+
+  .about-work{
+    font-size: 18px;
+  }
+}
