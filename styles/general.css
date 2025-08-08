@@ -31,3 +31,11 @@ html{
   bottom: 500px;
 }
 
+@media (max-width:550px) {
+  .effect-image3{
+    right: -100px;
+    bottom: 800px;
+  }
+}
+
+
