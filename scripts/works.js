@@ -7,7 +7,7 @@ function renderWorksCard() {
 
   works.forEach((work) => {
     worksCardHtml += `
-      <div class="all-works js-work-card">
+      <div class="all-works js-work-card" data-position="${work.id}">
         <div class="work-image-container">
           <img class="work-image-back" src="./images/image4.png">
           <img class="work_image" src="${work.image}">
@@ -37,7 +37,7 @@ function renderWorksCard() {
           </div>
           <div class="slides">
             <div class="slide-number">${work.id}</div>
-            ${slidesForWork(works, work.id)}
+            ${slidesForWork(work.id)}
           </div>
         </div>
       </div>
@@ -55,17 +55,100 @@ function renderWorksCard() {
     return skillsHtml
   };
 
-  function slidesForWork(works, id) {
+  function slidesForWork(id) {
     let slidesHtml = ''
     works.forEach((work, i) => {
-      slidesHtml += `<div class="slide ${id === i + 1 ? 'checked-work' : ''}"></div>`
+      slidesHtml += `<div data-position='${work.id}' class="slide js-slide ${id === i + 1 ? 'checked-work' : ''}"></div>`
     });
     return slidesHtml
   }
 
+  function setOpacity(currentPosition) {
+    const workCards = document.querySelectorAll('.js-work-card')
+    workCards.forEach((work) => {
+      if (Number(work.dataset.position) === currentPosition) {
+        work.style.opacity = '1';
+      } else {
+        work.style.opacity = '0';
+      }
+    });
+  }
+
+  function changeCardRightOpacity(currentPosition) {
+    const workCards = document.querySelectorAll('.js-work-card')
+    workCards.forEach((work) => {
+      if (Number(work.dataset.position) === currentPosition + 1) {
+        work.style.opacity = '1';
+      }
+    });
+  }
+
+  function changeCardLeftOpacity(currentPosition) {
+    const workCards = document.querySelectorAll('.js-work-card')
+    workCards.forEach((work) => {
+      if (Number(work.dataset.position) === currentPosition - 1) {
+        work.style.opacity = '1';
+      }
+    });
+  }
+
+  function changeCardRight() {
+    workCards.forEach((card) => {
+      card.classList.add('active-transition');
+    });
+
+    setTimeout(() => {
+      changeCardRightOpacity((currentPosition / (-100)) + 1)
+      const worksPage = document.querySelector('.js-works-page');
+      currentPosition -= 100;
+      if (currentPosition >= -100 * (works.length - 1)) {
+
+        worksPage.style.transform = `translateX(${currentPosition}%)`;
+      } else {
+        currentPosition = -100 * (works.length - 1)
+      };
+
+    }, 300);
+
+    setTimeout(() => {
+      workCards.forEach((card) => {
+        card.classList.remove('active-transition');
+        setOpacity((currentPosition / (-100)) + 1)
+      });
+    }, 900);
+  };
+
+  function changeCardLeft() {
+    workCards.forEach((card) => {
+      card.classList.add('active-transition');
+    });
+
+    setTimeout(() => {
+      changeCardLeftOpacity((currentPosition / (-100)) + 1)
+      const worksPage = document.querySelector('.js-works-page');
+      currentPosition += 100;
+      if (currentPosition <= 0) {
+
+        worksPage.style.transform = `translateX(${currentPosition}%)`;
+      } else {
+        currentPosition = 0
+      };
+
+    }, 300);
+
+    setTimeout(() => {
+      workCards.forEach((card) => {
+        card.classList.remove('active-transition');
+        setOpacity((currentPosition / (-100)) + 1)
+      });
+    }, 900);
+  };
+
   worksPage.innerHTML = worksCardHtml
 
   let currentPosition = 0;
+
+  setOpacity((currentPosition / (-100)) + 1)
 
   const rightButtons = document.querySelectorAll('.js-right');
   const leftButtons = document.querySelectorAll('.js-left');
@@ -73,52 +156,40 @@ function renderWorksCard() {
 
   rightButtons.forEach((rightButton) => {
     rightButton.addEventListener('click', () => {
-      workCards.forEach((card) => {
-        card.classList.add('active-transition');
-      });
-
-      setTimeout(() => {
-        const worksPage = document.querySelector('.js-works-page');
-        currentPosition -= 100;
-        if (currentPosition >= -100 * (works.length-1)){
-          
-          worksPage.style.transform = `translateX(${currentPosition}%)`;
-        } else {
-          currentPosition = -100 * (works.length-1)
-        };
-        
-      }, 300);
-
-      setTimeout(() => {
-        workCards.forEach((card) => {
-        card.classList.remove('active-transition');
-      });
-      }, 900);
+      changeCardRight()
     });
   });
 
   leftButtons.forEach((leftButton) => {
     leftButton.addEventListener('click', () => {
+      changeCardLeft()
+    });
+  });
+
+  const slidesWorks = document.querySelectorAll('.js-slide')
+  slidesWorks.forEach((slide) => {
+    slide.addEventListener('click', () => {
+      const position = slide.dataset.position
+      currentPosition = -100 * (position - 1)
       workCards.forEach((card) => {
         card.classList.add('active-transition');
+      });
+      workCards.forEach((work) => {
+        work.style.opacity = '1';
       });
 
       setTimeout(() => {
         const worksPage = document.querySelector('.js-works-page');
-        currentPosition += 100;
-        if (currentPosition <= 0){
-          
-          worksPage.style.transform = `translateX(${currentPosition}%)`;
-        } else {
-          currentPosition = 0
-        };
-        
+
+        worksPage.style.transform = `translateX(${currentPosition}%)`;
+
       }, 300);
 
       setTimeout(() => {
         workCards.forEach((card) => {
-        card.classList.remove('active-transition');
-      });
+          card.classList.remove('active-transition');
+          setOpacity((currentPosition / (-100)) + 1)
+        });
       }, 900);
     });
   });

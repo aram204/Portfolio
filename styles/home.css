@@ -57,3 +57,16 @@ color: #FFFFFF;
   color: #928A97;
 }
 
+@media (max-width:550px) {
+  .home-page{
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .scroll{
+    width: 100%;
+    transform: translateX(-40px);
+    justify-content: center;
+  }
+}
