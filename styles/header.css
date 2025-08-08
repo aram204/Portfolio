@@ -2,10 +2,8 @@
   display: flex;
   align-items: center;
   column-gap: 40px;
-  /* Group 46 */
-
   position: absolute;
-  left: 129px;
+  left: 130px;
   top: 45.5px;
   z-index: 1000;
 
@@ -56,5 +54,21 @@
   transform: translate(-45%, -45%);
   width: 110px;
   z-index: -1;
+}
+
+@media (max-width:550px) {
+  .header-container{
+    left: 50%;
+    transform: translateX(-50%);
+    column-gap: 25px;
+  }
+
+  .header-tag{
+    font-size: 16px;
+  }
+
+  .checked-tag{
+    width: 90px;
+  }
 }
 

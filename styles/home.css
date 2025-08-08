@@ -48,7 +48,7 @@ color: #FFFFFF;
   cursor: pointer;
 }
 
-.scroll{
+.home-page .scroll{
   display: flex;
   align-items: center;
   column-gap: 10px;
@@ -60,11 +60,12 @@ color: #FFFFFF;
 @media (max-width:550px) {
   .home-page{
     margin: 0;
+    padding-top: 250px;
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  .scroll{
+  .home-page .scroll{
     width: 100%;
     transform: translateX(-40px);
     justify-content: center;
