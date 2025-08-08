@@ -1,0 +1,104 @@
+.get-in-touch {
+  height: 100vh;
+  position: relative;
+}
+
+.get-in-touch-back {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.get-in-touch-container {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.get-in-touch-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  margin-top: 40px;
+  color: #F44336;
+}
+
+.get-in-touch-content {
+  width: calc(100% - 100px);
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  height: 100%;
+}
+
+.drop-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000C24;
+}
+
+.input-part{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.input-name{
+  padding-left: 10px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 170%;
+  color: #928A97;
+}
+
+.input-email{
+  padding-left: 10px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 170%;
+  color: #928A97;
+}
+
+.input-message{
+  padding-left: 10px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 170%;
+  color: #928A97;
+  padding-bottom: 50px;
+}
+
+.send-button{
+border: none;
+padding: 16px 24px;
+color: white;
+background: #000C24;
+border-radius: 4px;
+margin-bottom: 50px;
+}
+
+.send-button:hover{
+  cursor: pointer;
+  background-color: #001b51;
+}

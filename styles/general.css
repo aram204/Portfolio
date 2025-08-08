@@ -28,7 +28,7 @@ html{
   position: absolute;
   width: 1000px;
   right: 0;
-  bottom: 500px;
+  bottom: 1000px;
 }
 
 @media (max-width:550px) {
