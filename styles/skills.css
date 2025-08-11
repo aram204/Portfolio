@@ -76,6 +76,14 @@
   margin-top: 50px;
   row-gap: 30px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.5);
+}
+
+.skill-icons-container.animate{
+  transition: all 1s ease;
+  transform: translateX(0) scale(1);
+  opacity: 1;
 }
 
 .skill-icons-container svg{

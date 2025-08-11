@@ -3,18 +3,18 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  align-items: center;
 
 
   transition: transform 0.5s linear;
 }
 
 .all-works {
-  flex: 0 0 calc(100vw - 215px);
+  flex: 0 0 calc(100vw - 95px);
   display: flex;
   column-gap: 50px;
-  height: max-content;
-  margin-left: 160px;
+  height: 100vh;
+  margin-left: 40px;
+  padding-left: 120px;
   margin-right: 40px;
   position: relative;
   align-items: center;
@@ -204,14 +204,16 @@
   }
 
   .all-works {
-    flex: 0 0 calc(100vw - 80px);
+    flex: 0 0 calc(100vw - 40px);
     flex-direction: column;
     row-gap: 30px;
     margin: 0;
     padding: 0;
     padding-top: 10px;
-    margin-right: 40px;
-    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
     height: 100%;
   }
 

@@ -19,7 +19,7 @@
   overflow: hidden;
   white-space: nowrap;
   animation:
-    typing 3.5s steps(40, end) infinite
+    typing 3.5s steps(50, end) infinite
 }
 
 /* The typing effect */
