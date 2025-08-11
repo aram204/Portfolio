@@ -11,6 +11,14 @@
 
 .skill_image {
   max-width: 375px;
+  transform: rotateY(10deg);
+  transition: transform 1s ease;
+  
+}
+
+.skill_image.animate{
+  transform: rotateY(0deg);
+  
 }
 
 .image-back-skills {

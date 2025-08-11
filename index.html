@@ -24,18 +24,18 @@
   <img class="effect-image3" src="./images/image5.png">
 
   <header class="header-container">
-    <div class="home-header header-tag checked js-header-tag">
+    <a href="#home" class="home-header header-tag checked js-header-tag">
       <img class="checked-tag" src="./images/image3.png">
       Home
-    </div>
-    <div class="about-header header-tag js-header-tag">About</div>
-    <div class="skills-header header-tag js-header-tag">Skills</div>
-    <div class="works-heaader header-tag js-header-tag">Works</div>
-    <div class="contact-heaader header-tag js-header-tag">Contact</div>
+    </a>
+    <a href="#about-me" class="about-header header-tag js-header-tag">About</a>
+    <a href="#skills" class="skills-header header-tag js-header-tag">Skills</a>
+    <a href="#works" class="works-heaader header-tag js-header-tag">Works</a>
+    <a href="#contact" class="contact-heaader header-tag js-header-tag">Contact</a>
   </header>
 
   <main>
-    <div class="home-page">
+    <div id="home" class="home-page">
       <div class="name">ARAM SARGSYAN</div>
       <div class="profession">ML Engineer + Front-end Developer</div>
       <div class="home-contacts">
@@ -69,11 +69,11 @@
       </div>
     </div>
 
-    <div class="about-me-page">
+    <div id="about-me" class="about-me-page">
 
       <div class="image-container">
         <img class="image-back" src="./images/image4.png">
-        <img class="my_image" src="./images/IMG_0692.JPG">
+        <img class="my_image js-image" src="./images/IMG_0692.JPG">
       </div>
       <div class="about-me-content">
         <div class="about-me-header">
@@ -97,7 +97,7 @@
       </div>
     </div>
 
-    <div class="skills-page">
+    <div id="skills" class="skills-page">
 
 
       <div class="about-skills-content">
@@ -241,7 +241,7 @@
 
       <div class="skill-image-container">
         <img class="image-back-skills" src="./images/image4.png">
-        <img class="skill_image" src="./images/image6.png">
+        <img class="skill_image js-image" src="./images/image6.png">
       </div>
 
       <div class="scroll">
@@ -254,7 +254,7 @@
       </div>
     </div>
 
-    <div class="works-page js-works-page">
+    <div id="works" class="works-page js-works-page">
       <div class="scroll">
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -266,7 +266,7 @@
 
     </div>
 
-    <div class="get-in-touch">
+    <div id="contact" class="get-in-touch">
       <img class="get-in-touch-back" src="./images/image.png">
       <form class="get-in-touch-container contact-form" onsubmit="sendEmail(); this.reset(); return false">
         <div class="get-in-touch-header">Get in Touch</div>
@@ -329,7 +329,7 @@
       });
     })();
   </script>
-  <script src="./scripts/contact.js"></script>
+  <script type="module" src="./scripts/contact.js"></script>
 </body>
 
 </html>

@@ -35,6 +35,11 @@
 
 .work_image {
   max-width: 375px;
+  transform: rotateY(0deg);
+  transition: transform 1s ease;
+}
+
+.work_image.animate{
   transform: rotateY(10deg);
 }
 

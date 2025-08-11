@@ -15,18 +15,14 @@
 
 .my_image {
   max-width: 375px;
-  animation: rotate-animation both;
-  animation-timeline: view();
+  transform: rotateY(0deg);
+  transition: transform 1s ease;
 }
 
-@keyframes rotate-animation{
-  from {
-    transform: rotateY(0deg)
-  }
-  to{
-    transform: rotateY(10deg)
-  }
+.my_image.animate{
+  transform: rotateY(10deg);
 }
+
 
 .about-me-content{
   display: flex;

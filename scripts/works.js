@@ -1,4 +1,5 @@
 import { works } from "./data.js";
+import { rotateAnimation } from "./scrollAnimations.js";
 
 function renderWorksCard() {
   const worksPage = document.querySelector('.js-works-page')
@@ -10,7 +11,7 @@ function renderWorksCard() {
       <div class="all-works js-work-card" data-position="${work.id}">
         <div class="work-image-container">
           <img class="work-image-back" src="./images/image4.png">
-          <img class="work_image" src="${work.image}">
+          <img class="work_image js-image" src="${work.image}">
           ${work.id !== 1 ? '<img class="change-work-left js-left" src="./images/change_work.png">' : ''}
           ${work.id !== works.length ? '<img class="change-work-right js-right" src="./images/change_work.png">' : ''}
         </div>
@@ -194,6 +195,7 @@ function renderWorksCard() {
     });
   });
 
+  rotateAnimation()
 }
 
 renderWorksCard();
