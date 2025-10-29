@@ -36,3 +36,13 @@ function sendEmail() {
       console.error("Error:", err);
     });
 }
+
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        sendEmail();
+        this.reset(); 
+    });
+};

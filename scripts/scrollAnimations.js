@@ -13,6 +13,5 @@ export function rotateAnimation() {
   const images = document.querySelectorAll('.js-image')
   images.forEach(el => observer.observe(el))
   const icons = document.querySelector('.js-icons')
-  console.log(icons)
   observer.observe(icons)
 }
